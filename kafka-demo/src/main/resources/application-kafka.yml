@@ -7,10 +7,12 @@ spring:
       retries: 1
       acks: 1
       batch-size: 16384
-      buffer-memory: 33554432
+      buffer-memory: 33554432 # 消息收集器 缓存大小 默认33554432 32MB
       properties:
-        partitioner-class: com.example.kafkademo.config.DemoPartitioner
-        interceptor-class: com.example.kafkademo.config.ProducerInterceptorPrefix
+        # 自定义分区
+        partitioner.classes: com.example.kafkademo.config.DemoPartitioner
+        # 自定义过滤器
+        interceptor.classes: com.example.kafkademo.config.ProducerInterceptorPrefix
     consumer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

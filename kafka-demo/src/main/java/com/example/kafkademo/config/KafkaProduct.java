@@ -31,8 +31,8 @@ public class KafkaProduct {
         ObjectMapper objectMapper = new ObjectMapper();
         UserEntity user = createUser();
         String s = JSON.toJSONString(user);
-        log.info("kafkaProduct 发送消息,发送消息为:{}",objectMapper.writeValueAsString(user));
         kafkaTemplate.send(topic,"test");
+        log.info("kafkaProduct 发送消息,发送消息为:{}",objectMapper.writeValueAsString("test"));
 
     }
 
