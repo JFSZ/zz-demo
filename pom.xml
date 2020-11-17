@@ -17,6 +17,7 @@
 
     <modules>
         <module>kafka-demo</module>
+        <module>elasticsearch-demo</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -73,6 +74,21 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.44</version>
+        </dependency>
+
+        <!-- swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
+
+        <!-- swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.0</version>
         </dependency>
 
     </dependencies>
